@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plateforme Éducative sur l'Efficacité Énergétique</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url('C:/Users/hp/Downloads/background2.webp');
+        background-size: cover;
+        background-attachment: fixed; 
+        background-position: center;
+        background-color: #f4f4f4;
+    }
+    
+    header {
+        background-color: #8BB174; 
+        color: #F4D35E;
+        padding: 1em 0;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        position: relative; 
+        transition: color 0.3s ease;
+    }
+    
+    nav a::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: white;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out;
+    }
+    
+    nav a:hover::before {
+        visibility: visible;
+        transform: scaleX(1);
+    }
+    
+    nav a:hover {
+        color: #FFD700; 
+    }
+    
+    main {
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.8); 
+        border-radius: 10px; 
+    }
+    
+   
+    section {
+        margin-bottom: 40px;
+    }
+    
+   
+    h2 {
+        border-bottom: 2px solid #F4D35E;
+        padding-bottom: 10px;
+        color: #333;
+    }
+
+h2 {
+    opacity: 0;
+    transform: translateX(-100px); 
+    transition: all 0.5s ease;
+}
+
+h2.visible {
+    opacity: 1;
+    transform: translateX(0); 
+} 
+    button {
+        background-color: #F4D35E;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 5px; 
+        transition: background-color 0.3s ease;
+    }
+    
+    button:hover {
+        background-color: #F4D35E; 
+        transform: rotate(5deg);
+    }
+
+button {
+    background-color: #8BB174; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+}
+    
+    #result, #quizResult {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    
+#blog {
+    font-family: 'Merriweather', serif; 
+    padding: 20px;
+    border-radius: 10px; 
+}
+
+#blog h3 {
+    color: #333; 
+    font-weight: bold; 
+    margin-bottom: 10px;
+}
+
+#blog p {
+    color: #555; 
+    line-height: 1.8; 
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#blog article {
+    margin-bottom: 40px;
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>Économisez l'Eau et l'Électricité</h1>
+        <nav>
+            <a href="#guide">Guides</a>
+            <a href="#simulator">Simulateur</a>
+            <a href="#quiz">Quiz</a>
+            <a href="#blog">Blog</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="guide">
+            <h2>Guides et Conseils</h2>
+        
+            <article>
+                <h3>Conseils pour Économiser l'Eau</h3>
+                <p>Utilisez des dispositifs économes en eau, comme des aérateurs de robinets, et réparez les fuites rapidement. Prenez des douches plutôt que des bains pour économiser de l'eau.</p>
+            </article>
+        
+            <article>
+                <h3>Conseils pour Économiser l'Électricité</h3>
+                <p>Éteignez les appareils électroniques lorsqu'ils ne sont pas utilisés et privilégiez les ampoules LED qui consomment jusqu'à 80% moins d'électricité que les ampoules classiques.</p>
+            </article>
+        
+            <article>
+                <h3>Optimisation de la Consommation d'Énergie au Bureau</h3>
+                <p>Pour économiser de l'énergie au bureau, pensez à débrancher les chargeurs inutilisés, utilisez des multiprises avec interrupteur, et éteignez les ordinateurs en fin de journée. Des pratiques simples peuvent réduire considérablement la consommation d’énergie.</p>
+            </article>
+        
+            <article>
+                <h3>Comment Utiliser les Appareils Électroménagers de Manière Efficace</h3>
+                <p>Évitez de faire fonctionner votre lave-linge ou votre lave-vaisselle à moitié vide. Utilisez-les en mode éco pour réduire leur consommation d’eau et d’électricité. Pensez aussi à nettoyer régulièrement les filtres pour optimiser leur fonctionnement.</p>
+            </article>
+        
+            <article>
+                <h3>Réduire l'Énergie Utilisée par le Chauffage et la Climatisation</h3>
+                <p>Réglez votre thermostat à une température modérée. En hiver, un réglage autour de 19°C est suffisant. En été, optez pour des ventilateurs plutôt que la climatisation, et n’oubliez pas d’isoler correctement vos fenêtres et portes pour éviter les pertes de chaleur ou de fraîcheur.</p>
+            </article>
+        
+            <article>
+                <h3>Réduire la Consommation d'Eau en Jardinage</h3>
+                <p>Arrosez vos plantes tôt le matin ou tard le soir pour minimiser l'évaporation. Utilisez des récupérateurs d'eau de pluie pour arroser vos plantes et privilégiez les plantes locales qui nécessitent moins d'eau.</p>
+            </article>
+        
+            <article>
+                <h3>Optimisation de la Lumière Naturelle</h3>
+                <p>Utilisez au maximum la lumière naturelle en plaçant vos meubles près des fenêtres. Cela permet de réduire l’usage de l’éclairage artificiel pendant la journée. Pensez également à installer des capteurs de luminosité pour que vos lumières ne s’allument que lorsque nécessaire.</p>
+            </article>
+        
+            <article>
+                <h3>Utilisation des Énergies Renouvelables à la Maison</h3>
+                <p>Si possible, investissez dans des panneaux solaires pour produire votre propre électricité. Cela vous permet de réduire votre dépendance au réseau électrique et de faire des économies à long terme.</p>
+            </article>
+        
+        </section>
+        
+
+        <section id="simulator">
+            <h2>Simulateur de Consommation</h2>
+            <label for="showerTime">Durée de la douche (minutes):</label>
+            <input type="number" id="showerTime" value="5">
+            <button onclick="calculateConsumption()">Calculer</button>
+            <p id="result">Consommation: 0 litres d'eau</p>
+        </section>
+
+        <section id="quiz">
+            <h2>Quiz Interactif</h2>
+        
+            <div id="quiz1">
+                <p>Quelle est la consommation moyenne d'eau par jour par personne ?</p>
+                <button onclick="checkAnswer('100 litres', 'quizResult1')">100 litres</button>
+                <button onclick="checkAnswer('200 litres', 'quizResult1')">200 litres</button>
+                <button onclick="checkAnswer('300 litres', 'quizResult1')">300 litres</button>
+                <p id="quizResult1"></p>
+            </div>
+        
+            <div id="quiz2">
+                <p>Quel appareil consomme le plus d'énergie dans une maison ?</p>
+                <button onclick="checkAnswer('Télévision', 'quizResult2')">Télévision</button>
+                <button onclick="checkAnswer('Réfrigérateur', 'quizResult2')">Réfrigérateur</button>
+                <button onclick="checkAnswer('Machine à laver', 'quizResult2')">Machine à laver</button>
+                <p id="quizResult2"></p>
+            </div>
+        
+            <div id="quiz3">
+                <p>Quelle source d'énergie est renouvelable ?</p>
+                <button onclick="checkAnswer('Charbon', 'quizResult3')">Charbon</button>
+                <button onclick="checkAnswer('Pétrol', 'quizResult3')">Pétrol</button>
+                <button onclick="checkAnswer('Énergie solaire', 'quizResult3')">Énergie solaire</button>
+                <p id="quizResult3"></p>
+            </div>
+        
+            <div id="quiz4">
+                <p>Combien de litres d'eau une personne économise-t-elle en fermant le robinet pendant le brossage des dents ?</p>
+                <button onclick="checkAnswer('5 litres', 'quizResult4')">5 litres</button>
+                <button onclick="checkAnswer('10 litres', 'quizResult4')">10 litres</button>
+                <button onclick="checkAnswer('15 litres', 'quizResult4')">15 litres</button>
+                <p id="quizResult4"></p>
+            </div>
+        
+            <div id="quiz5">
+                <p>Quelle lampe consomme le moins d'électricité ?</p>
+                <button onclick="checkAnswer('Ampoule incandescente', 'quizResult5')">Ampoule incandescente</button>
+                <button onclick="checkAnswer('Ampoule halogène', 'quizResult5')">Ampoule halogène</button>
+                <button onclick="checkAnswer('Ampoule LED', 'quizResult5')">Ampoule LED</button>
+                <p id="quizResult5"></p>
+            </div>
+        
+            <div id="quiz6">
+                <p>Quel geste simple peut économiser de l'électricité ?</p>
+                <button onclick="checkAnswer('Éteindre la lumière en quittant une pièce', 'quizResult6')">Éteindre la lumière</button>
+                <button onclick="checkAnswer('Ouvrir les fenêtres en hiver', 'quizResult6')">Ouvrir les fenêtres</button>
+                <button onclick="checkAnswer('Utilisez des chandelles', 'quizResult6')">Utilisez des chandelles</button>
+                <p id="quizResult6"></p>
+            </div>
+        
+        </section>
+        <section id="blog">
+            <h2>Blog</h2>
+            
+            <article>
+                <h3>Initiatives Vertes de Lydec</h3>
+                <p>Lydec met en œuvre plusieurs initiatives pour réduire son empreinte carbone. Parmi celles-ci, l’installation de panneaux solaires sur les toits de ses installations et le passage à une flotte de véhicules électriques pour réduire les émissions de CO2. L’entreprise s’engage également à sensibiliser les consommateurs à réduire leur consommation d’eau et d’énergie.</p>
+            </article>
+        
+            <article>
+                <h3>Comment Économiser l'Électricité chez Soi</h3>
+                <p>Voici quelques astuces simples pour réduire votre facture d’électricité à la maison :
+                   <ul>
+                       <li>Éteignez les appareils en veille, cela peut économiser jusqu'à 10% de votre consommation annuelle d’électricité.</li>
+                       <li>Utilisez des ampoules LED qui consomment 90% moins d’énergie que les ampoules traditionnelles.</li>
+                       <li>Installez des minuteries ou des détecteurs de mouvement pour les lumières extérieures.</li>
+                   </ul>
+                </p>
+            </article>
+        
+            <article>
+                <h3>Les Bénéfices des Énergies Renouvelables</h3>
+                <p>Les énergies renouvelables, comme le solaire et l’éolien, sont de plus en plus accessibles. Non seulement elles réduisent les émissions de gaz à effet de serre, mais elles permettent aussi de réaliser des économies à long terme. Lydec investit dans des solutions vertes pour rendre l’énergie durable et accessible à tous.</p>
+            </article>
+        
+            <article>
+                <h3>Conseils pour Réduire votre Consommation d'Eau</h3>
+                <p>La consommation d’eau est une ressource précieuse. En installant des économiseurs d'eau sur vos robinets et douches, et en réparant les fuites, vous pouvez réduire votre consommation jusqu'à 30%. Lydec recommande également de choisir des appareils électroménagers économes en eau, comme des lave-vaisselles certifiés économes.</p>
+            </article>
+        </section>
+        <h1>Abonnez-vous pour recevoir des conseils sur la conservation de l'eau et de l'énergie</h1>
+        <p>Inscrivez votre adresse e-mail pour recevoir des astuces régulières.</p>
+    
+        <form action="subscribe.html" method="POST">
+            <label for="email">Votre Email :</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">S'abonner</button>
+        </form>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc_2VsDokqgBssrZVzx5TiFEXK9QmG-nfs5KO_n0aECCbyDNQ/viewform?embedded=true" width="640" height="450" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>"    
+    </main>
+
+    <script>
+        function calculateConsumption() {
+    const showerTime = document.getElementById('showerTime').value;
+    const waterConsumption = showerTime * 9; 
+    document.getElementById('result').innerText = `Consommation: ${waterConsumption} litres d'eau`;
+}
+function checkAnswer(answer, resultId) {
+    let correctAnswers = {
+        "quizResult1": "100 litres",
+        "quizResult2": "Réfrigérateur",
+        "quizResult3": "Énergie solaire",
+        "quizResult4": "10 litres",
+        "quizResult5": "Ampoule LED",
+        "quizResult6": "Éteindre la lumière en quittant une pièce"
+    };
+
+    if (answer === correctAnswers[resultId]) {
+        document.getElementById(resultId).innerText = 'Correct!';
+        document.getElementById(resultId).style.color = 'green';
+        document.getElementById(resultId).style.fontWeight = 'bold';
+    } else {
+        document.getElementById(resultId).innerText = 'Incorrect. Essayez encore!';
+        document.getElementById(resultId).style.color = 'red';
+        document.getElementById(resultId).style.fontWeight = 'bold';
+    }
+}
+window.addEventListener('scroll', function() {
+    let titles = document.querySelectorAll('h2');
+    let windowHeight = window.innerHeight;
+
+    titles.forEach(function(title) {
+        let position = title.getBoundingClientRect().top;
+        if (position < windowHeight - 100) {
+            title.classList.add('visible');
+        }
+    });
+});
+
+    </script>
+</body>
+</html>
